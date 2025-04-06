@@ -32,6 +32,8 @@
 ```bash
 npm create vite@latest frontEnd
 npm i @react-oauth/google axios react-router-dom
+ 
+---
 
 ### 3. Backend
 
