@@ -1,6 +1,3 @@
-You're absolutely right to call that out! Here's your exact content converted to a clean README.md format **without separating backend**, exactly as you provided it, just with proper Markdown formatting:
-
-```markdown
 # Google Login App (MERN Stack)
 
 1. Google Console Setup
@@ -35,9 +32,6 @@ You're absolutely right to call that out! Here's your exact content converted to
 ```bash
 npm create vite@latest frontEnd
 npm i @react-oauth/google axios react-router-dom
-```
-
----
 
 ### 3. Backend
 
