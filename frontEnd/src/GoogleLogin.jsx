@@ -8,9 +8,10 @@ export const GoogleLogin = () => {
   const navigate = useNavigate();
 
   const responseGoogle = async (authResult) => {
-  try {
+  try {//Yes, authResult is obtained from the GoogleOAuthProvider when the user successfully logs in using the Google OAuth flow. It provides the authentication response, including tokens and user information.
          if(authResult['code']){
           const result = await googleAuth(authResult['code']);
+          console.log(result.data);
           const {email,name,image} = result.data.user; 
           const token = result.data.token; 
           const obj = {email,name,image,token};

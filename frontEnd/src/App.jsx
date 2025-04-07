@@ -7,6 +7,7 @@ import { PageNotFound } from './PageNotFound'
 import { GoogleOAuthProvider } from '@react-oauth/google'
 import { useState } from 'react'
 import { RefreshHandler } from './RefreshHandler'
+
 function App() {
 const [isAuthenticated, setIsAuthenticated] = useState(false);
 
@@ -17,12 +18,13 @@ const GoogleAuthWrapper = ()=>{
     </GoogleOAuthProvider>
   )
 }
-
+//if any person try to access dashboard without login then redirect him to login page
 const PrivateRoute = ({element}) => {
   return isAuthenticated ? element : <Navigate to="/login" />
 }
   return (
     <BrowserRouter>
+    //RefreshHandler is used to check if the user is authenticated or not
     <RefreshHandler setIsAuthenticated={setIsAuthenticated}/>
       <Routes>
         <Route path="/login" element={<GoogleAuthWrapper/>} />
